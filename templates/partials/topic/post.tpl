@@ -8,14 +8,18 @@
 		</a>
 	</div>
 
-	<small class="pull-left">
-		<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
+	<small class="userinfo pull-left">
 		<strong>
-			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
+			<a class="status {posts.user.status}" style="font-size:24px" href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}" title="[[global:{posts.user.status}]]">{posts.user.username}</a>
+		
+
 		</strong>
-
+		<span class="reputation">
+			<i class="fa fa-circle" style="color:gold"></i>
+			<span data-favourites="{posts.reputation}">{posts.user.reputation}</span>
+		</span>
 		<!-- IMPORT partials/topic/badge.tpl -->
-
+		<div class="postinfo">
 		<div class="visible-xs-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 			[[global:posted_ago, <a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
 
@@ -32,16 +36,18 @@
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
 		</div>
+	</div>
 		<div class="votes">
 			<!-- IF !reputation:disabled -->
 			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
-				<i class="fa fa-chevron-up"></i>
+				<i class="fa fa-caret-up"></i>
 			</a>
 			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>
 			<!-- IF !downvote:disabled -->
 			<a component="post/downvote" href="#" class="<!-- IF posts.downvoted -->downvoted<!-- ENDIF posts.downvoted -->">
-				<i class="fa fa-chevron-down"></i>
+				<i class="fa fa-caret-down"></i>
 			</a>
+
 			<!-- ENDIF !downvote:disabled -->
 			<!-- ENDIF !reputation:disabled -->
 		</div>
@@ -50,6 +56,15 @@
 	</small>
 </div>
 
+	<a component="post/favourite" tabindex="-1" href="#" data-favourited="{posts.favourited}">
+<div class="favorite">
+		<i component="post/favourite/on" class="fa fa-heart <!-- IF !posts.favourited -->hidden<!-- ENDIF !posts.favourited -->"></i>
+		<i component="post/favourite/off" class="fa fa-heart-o <!-- IF posts.favourited -->hidden<!-- ENDIF posts.favourited -->"></i>
+		<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>
+</div>
+	</a>
+
+<br />
 <br />
 <div class="content" component="post/content" itemprop="text">
 	{posts.content}

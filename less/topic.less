@@ -54,13 +54,32 @@
 			border-radius: 2px;
 		}
 	}
-
+	.favorite {
+		position: absolute;
+		top: 1px;
+		right: 100px;
+		text-align: center;
+		padding: 5px;
+		font-size: 20px;
+		color: #777;
+	}
 	.votes {
 		position: absolute;
 		top: 1px;
 		right: 25px;
+		padding: 5px;
+		font-size: 20px;
+		color: #777;
 	}
-
+	.userinfo {
+		font-size: 20px;
+		padding-top: 5px;
+		color: #777;
+	}
+	.postinfo {
+		font-size: 14px;
+		padding-bottom: 15px;
+	}
 	[component="post/upvote"], [component="post/downvote"] {
 		color: @gray-light;
 	}
@@ -118,7 +137,8 @@
 		position: absolute;
 		right: -5px;
 		top: 0;
-		font-size: 14px;
+		font-size: 20px;
+		padding-top: 6px;
 
 		> a {
 			padding: 0.25em;

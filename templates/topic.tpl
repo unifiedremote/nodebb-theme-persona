@@ -1,6 +1,6 @@
 <div class="topic">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-
+<!-- IMPORT partials/variables/points_settings.tpl -->
 	<h1 component="post/header" itemprop="name">
 
 		<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
