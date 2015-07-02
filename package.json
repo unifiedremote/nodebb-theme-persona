@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-persona",
+  "name": "nodebb-theme-persona-ur",
   "version": "0.1.69",
   "nbbpm": {
     "compatibility": "^0.7.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "UR Persona theme for NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/unifiedremote/nodebb-theme-persona"
   },
   "keywords": [
     "nodebb",
@@ -18,6 +18,16 @@
     "responsive"
   ],
   "contributors": [
+    {
+      "name": "Philip Bergqvist",
+      "email": "philip@unfiedintents.com",
+      "url": "https://github.com/UI-Philip"
+    },
+    {
+      "name": "Jakob Berglund",
+      "email": "jakob@unfiedintents.com",
+      "url": "https://github.com/UI-Jakob"
+    },
     {
       "name": "Andrew Rodrigues",
       "email": "andrew@designcreateplay.com",
