@@ -6,7 +6,7 @@
 		<li class=''><a href='{config.relative_path}/users/sort-posts'>[[users:top_posters]]</a></li>
 		<li class=''><a href='{config.relative_path}/users/sort-reputation'>[[users:most_reputation]]</a></li>
 		<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
-		<li class=''><a href='{config.relative_path}/users/search'>[[users:search]]</a></li>
+		<!-- <li class=''><a href='{config.relative_path}/users/search'>[[users:search]]</a></li>-->
 		<!-- ENDIF function.displayUserSearch -->
 		<!-- IF inviteOnly -->
 		<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
